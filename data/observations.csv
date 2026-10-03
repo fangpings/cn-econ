@@ -1,0 +1,8 @@
+series_id,period_start,period_end,frequency,measure,unit,scope,method_version,comparability_group,release_date,captured_date,value,kind,source_url
+cn_gdp_nominal,2024-01-01,2024-12-31,annual,nominal_level,100m_CNY,mainland,preliminary,2024_preliminary,2025-01-17,2026-10-03,1349084,official,https://www.stats.gov.cn/xxgk/sjfb/zxfb2020/202501/t20250117_1958332.html
+cn_gdp_nominal,2024-01-01,2024-12-31,annual,nominal_level,100m_CNY,mainland,final_verification,2024_final,2025-12-26,2026-10-03,1348066,official,https://www.stats.gov.cn/xxgk/sjfb/zxfb2020/202512/t20251226_1962144.html
+cn_gdp_real_yoy,2024-01-01,2024-12-31,annual,real_yoy,percent,mainland,preliminary,2024_preliminary,2025-01-17,2026-10-03,5.0,official,https://www.stats.gov.cn/xxgk/sjfb/zxfb2020/202501/t20250117_1958332.html
+cn_gdp_real_yoy,2024-01-01,2024-12-31,annual,real_yoy,percent,mainland,final_verification,2024_final,2025-12-26,2026-10-03,5.0,official,https://www.stats.gov.cn/xxgk/sjfb/zxfb2020/202512/t20251226_1962144.html
+cn_housing_investment,2024-01-01,2024-12-31,annual,nominal_level,100m_CNY,developer_corporations,2024_release,2024_release,2025-01-17,2026-10-03,100280,official,https://www.stats.gov.cn/sj/zxfb/202501/t20250117_1958328.html
+cn_housing_sales_area,2024-01-01,2024-12-31,annual,area,10000_sqm,new_commodity_buildings,2024_release,2024_release,2025-01-17,2026-10-03,97385,official,https://www.stats.gov.cn/sj/zxfb/202501/t20250117_1958328.html
+cn_housing_sales_value,2024-01-01,2024-12-31,annual,nominal_level,100m_CNY,new_commodity_buildings,2024_release,2024_release,2025-01-17,2026-10-03,96750,official,https://www.stats.gov.cn/sj/zxfb/202501/t20250117_1958328.html

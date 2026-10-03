@@ -2,3 +2,5 @@ node_modules/
 textbook/.vitepress/cache/
 textbook/.vitepress/dist/
 .DS_Store
+__pycache__/
+*.py[cod]

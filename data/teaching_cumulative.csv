@@ -1,0 +1,4 @@
+series_id,period_start,period_end,frequency,measure,unit,scope,method_version,comparability_group,release_date,captured_date,value,kind,source_url
+demo_sales,2025-01-01,2025-02-28,ytd,nominal_level,100m_CNY,fictional_sample,v1,basis_A,2025-03-15,2026-10-03,180,teaching,teaching://chapter43
+demo_sales,2025-01-01,2025-03-31,ytd,nominal_level,100m_CNY,fictional_sample,v1,basis_A,2025-04-15,2026-10-03,300,teaching,teaching://chapter43
+demo_sales,2025-01-01,2025-04-30,ytd,nominal_level,100m_CNY,fictional_sample,v2,basis_B,2025-05-15,2026-10-03,430,teaching,teaching://chapter43
