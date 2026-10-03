@@ -41,7 +41,9 @@ export default defineConfig({
         ['16—21 · 货币与融资', 16, 21],
         ['22—26 · 财政与市场', 22, 26],
         ['27—29 · 开放经济', 27, 29],
-        ['30—32 · 综合分析与实践', 30, 32]
+        ['30—35 · 股票市场与股东回报', 30, 35],
+        ['36—38 · 房地产与家庭资产负债表', 36, 38],
+        ['39—41 · 综合分析与实践', 39, 41]
       ] as const).map(([text, from, to]) => ({ text, collapsed: false, items: chapters(from, to) })).filter(group => group.items.length),
       ... (files.some(file => file.startsWith('appendix-')) ? [{ text: '配套资料', collapsed: false, items: files.filter(file => file.startsWith('appendix-')).map(page) }] : [])
     ],
