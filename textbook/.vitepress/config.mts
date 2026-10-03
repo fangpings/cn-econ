@@ -9,6 +9,7 @@ const page = (file: string) => ({
   link: file === 'README.md' ? '/' : `/${file.replace(/\.md$/, '')}`
 })
 const chapters = (from: number, to: number) => files
+  .filter(file => file !== '11-housing.md')
   .filter(file => /^\d{2}[a-z]?-.+\.md$/.test(file) && Number(file.slice(0, 2)) >= from && Number(file.slice(0, 2)) <= to)
   .map(page)
 
@@ -36,14 +37,14 @@ export default defineConfig({
       { text: '课程介绍', items: [{ text: '学习指南与全书目录', link: '/' }] },
       ...([
         ['01—04 · 基础与统计口径', 1, 4],
-        ['05—12 · 实体经济', 5, 12],
+        ['05—10、12 · 实体经济', 5, 12],
         ['13—15 · 价格', 13, 15],
         ['16—21 · 货币与融资', 16, 21],
         ['22—26 · 财政与市场', 22, 26],
         ['27—29 · 开放经济', 27, 29],
         ['30—35 · 股票市场与股东回报', 30, 35],
-        ['36—38 · 房地产与家庭资产负债表', 36, 38],
-        ['39—41 · 综合分析与实践', 39, 41]
+        ['36—41 · 房地产：开发、家庭、土地与风险', 36, 41],
+        ['42—44 · 综合分析与实践', 42, 44]
       ] as const).map(([text, from, to]) => ({ text, collapsed: false, items: chapters(from, to) })).filter(group => group.items.length),
       ... (files.some(file => file.startsWith('appendix-')) ? [{ text: '配套资料', collapsed: false, items: files.filter(file => file.startsWith('appendix-')).map(page) }] : [])
     ],
