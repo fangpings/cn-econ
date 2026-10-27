@@ -9,10 +9,10 @@
     "check": "node tools/check_textbook.mjs && python3 -m unittest discover -s tests -v"
   },
   "devDependencies": {
-    "markdown-it-mathjax3": "^0.2.0",
-    "mermaid": "^11.4.1",
+    "markdown-it-mathjax3": "^4.3.2",
+    "mermaid": "^11.17.2",
     "vitepress": "^1.6.4",
-    "vitepress-plugin-mermaid": "^5.0.0"
+    "vitepress-plugin-mermaid": "^2.0.17"
   },
   "overrides": {
     "vite": "^6.4.3"
