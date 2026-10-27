@@ -1,6 +1,7 @@
 import { readFileSync, readdirSync } from 'node:fs'
 import { fileURLToPath } from 'node:url'
 import { defineConfig } from 'vitepress'
+import { withMermaid } from 'vitepress-plugin-mermaid'
 
 const root = fileURLToPath(new URL('../', import.meta.url))
 const files = readdirSync(root).filter(file => file.endsWith('.md')).sort()
@@ -21,12 +22,33 @@ function tokenize(text: string) {
     .map(part => part.segment)
 }
 
-export default defineConfig({
+export default withMermaid(defineConfig({
   base: '/cn-econ/',
   lang: 'zh-CN',
   title: '中国宏观经济',
   description: '从经济数字到运行机制 · 与美国对照理解',
   rewrites: { 'README.md': 'index.md' },
+  markdown: { math: true },
+  vite: { optimizeDeps: { include: ['mermaid'] } },
+  mermaid: {
+    theme: 'default',
+    flowchart: {
+      useMaxWidth: true,
+      htmlLabels: true,
+      curve: 'basis',
+      nodeSpacing: 50,
+      rankSpacing: 65,
+      padding: 16
+    },
+    themeVariables: {
+      fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif",
+      fontSize: '14px',
+      primaryColor: '#e6f4f1',
+      primaryBorderColor: '#238c83',
+      primaryTextColor: '#1b3835',
+      lineColor: '#238c83'
+    }
+  },
   themeConfig: {
     siteTitle: '中国宏观经济',
     nav: [
@@ -72,4 +94,4 @@ export default defineConfig({
       }
     }
   }
-})
+}))

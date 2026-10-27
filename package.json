@@ -3,12 +3,16 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "vitepress dev textbook --host 127.0.0.1 --port 5173 --strictPort",
+    "dev": "vitepress dev textbook --host 127.0.0.1 --port 5174 --strictPort",
     "build": "vitepress build textbook",
-    "preview": "vitepress preview textbook --host 127.0.0.1 --port 4173"
+    "preview": "vitepress preview textbook --host 127.0.0.1 --port 4174",
+    "check": "node tools/check_textbook.mjs && python3 -m unittest discover -s tests -v"
   },
   "devDependencies": {
-    "vitepress": "^1.6.4"
+    "markdown-it-mathjax3": "^0.2.0",
+    "mermaid": "^11.4.1",
+    "vitepress": "^1.6.4",
+    "vitepress-plugin-mermaid": "^5.0.0"
   },
   "overrides": {
     "vite": "^6.4.3"
